@@ -26,7 +26,7 @@ jobs:
           server_id: 'ossrh'
           maven_goals_phases: 'clean deploy'  #需要发布时使用 clean deploy
           # 部署哪个 写哪个项目
-          maven_args: '-DskipTests'
+          maven_args: '-DskipTests -X -e'
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}    # GPG 密钥
           gpg_passphrase: ${{ secrets.GPG_PASSPHRASE }}      # 自己设置的 GPG 密码
           nexus_username: ${{ secrets.NEXUS_USERNAME }}      # sonatype 用户名

@@ -189,9 +189,8 @@
                     <configuration>
                         <useAgent>true</useAgent>
                         <keyname>${gpg.keyname}</keyname>
-                        <passphraseServerId>${gpg.keyname}</passphraseServerId>
+                        <passphraseServerId>github-yaodwwy</passphraseServerId>
                         <gpgArguments>
-                            <arg>--batch</arg>
                             <arg>--pinentry-mode</arg>
                             <arg>loopback</arg>
                         </gpgArguments>
