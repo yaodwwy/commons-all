@@ -23,7 +23,7 @@ jobs:
       - name: Release Maven package
         uses: samuelmeuli/action-maven-publish@v1.4.0
         with:
-          server_id: 'ossrh'
+          server_id: 'ossrh-yaodwwy'
           maven_goals_phases: 'clean deploy'  #需要发布时使用 clean deploy
           # 部署哪个 写哪个项目
           maven_args: '-DskipTests -X -e'
