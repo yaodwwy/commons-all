@@ -114,6 +114,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <serverId>ossrh</serverId>
+<!--                    <serverId>github-yaodwwy</serverId>-->
                     <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
@@ -178,9 +179,9 @@
                 <artifactId>maven-gpg-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-<!--                    <useAgent>true</useAgent>-->
-<!--                    <keyname>${gpg.keyname}</keyname>-->
-<!--                    <passphraseServerId>github-yaodwwy</passphraseServerId>-->
+                    <useAgent>true</useAgent>
+                    <keyname>${gpg.keyname}</keyname>
+                    <passphraseServerId>github-yaodwwy</passphraseServerId>
                     <gpgArguments>
                         <arg>--pinentry-mode</arg>
                         <arg>loopback</arg>
@@ -200,4 +201,16 @@
         </plugins>
 
     </build>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh-yaodwwy</id>
+            <name>Sonatype Nexus Snapshots</name>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh-yaodwwy</id>
+            <name>Nexus Release Repository</name>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 </project>
